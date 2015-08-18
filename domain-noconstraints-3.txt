@@ -1,0 +1,23 @@
+operator pickupWolf(Obj, Side)
+pre: wolf(Obj), wolfAt(Side), free
+post: ~wolfAt(Side), ~free, holding(Obj)
+
+operator putdownWolf(Obj, Side)
+pre: wolf(Obj), holding(Obj)
+post: wolfAt(Side), free, ~holding(Obj)
+
+operator pickupSheep(Obj, Side)
+pre: sheep(Obj), sheepAt(Side), free
+post: ~sheepAt(Side), ~free, holding(Obj)
+
+operator putdownSheep(Obj, Side)
+pre: sheep(Obj), holding(Obj)
+post: sheepAt(Side), free, ~holding(Obj)
+
+operator pickupCabbage(Obj, Side)
+pre: cabbage(Obj), cabbageAt(Side), free
+post: ~cabbageAt(Side), ~free, holding(Obj)
+
+operator putdownCabbage(Obj, Side)
+pre: cabbage(Obj), holding(Obj)
+post: cabbageAt(Side), free, ~holding(Obj)
