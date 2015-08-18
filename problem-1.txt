@@ -1,0 +1,15 @@
+start(
+	sheepAt(west),
+	wolfAt(west),
+	cabbageAt(west),
+	boatAt(west),
+	~onBoat(sheep),
+	~onBoat(wolf),
+	~onBoat(cabbage)
+)
+
+goal(
+	sheepAt(east),
+	wolfAt(east),
+	cabbageAt(east)
+)

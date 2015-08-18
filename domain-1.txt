@@ -1,0 +1,27 @@
+operator loadSheep
+pre: sheepAt(side), boatAt(side), ~onBoat(sheep), ~onBoat(wolf), ~onBoat(cabbage)
+post: onBoat(sheep), ~sheepAt(side)
+
+operator loadWolf
+pre: wolfAt(side), boatAt(side), cabbageAt(sideA), sheepAt(sideB), ~onBoat(sheep), ~onBoat(wolf), ~onBoat(cabbage)
+post: onBoat(wolf), ~wolfAt(side)
+
+operator loadCabbage
+pre: cabbageAt(side), boatAt(side), wolfAt(sideA), cabbageAt(sideB), ~onBoat(sheep), ~onBoat(wolf), ~onBoat(cabbage)
+post: onBoat(cabbage), ~cabbageAt(side)
+
+operator crossRiver
+pre: boatAt(sideA)
+post: boatAt(sideB), ~boatAt(sideA)
+
+operator unloadSheep
+pre: sheepAt(boat), boatAt(side)
+post: sheepAt(side), ~onBoat(sheep)
+
+operator unloadWolf
+pre: wolfAt(boat), boatAt(side), cabbageAt(a), sheepAt(b)
+post: wolfAt(side), ~onBoat(wolf)
+
+operator unloadCabbage
+pre: cabbageAt(side), boatAt(side), wolfAt(a), cabbageAt(b)
+post: cabbageAt(side), ~onBoat(cabbage)

@@ -1,0 +1,12 @@
+start(
+	onSide(sheep, west),
+	onSide(wolf, west),
+	onSide(cabbage, west),
+	at(west)
+)
+
+goal(
+	onSide(sheep, east),
+	onSide(wolf, east),
+	onSide(cabbage, east)
+)

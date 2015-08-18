@@ -1,0 +1,11 @@
+operator load(Obj, Side)
+pre: at(Side), onSide(Obj, Side)
+post: onBoat(Obj), ~onSide(Obj, Side)
+
+operator crossRiver(From, To)
+pre: at(From)
+post: at(To), ~at(From)
+
+operator unload(Obj, Side)
+pre: at(Side), onBoat(Obj)
+post: ~onBoat(Obj), onSide(Obj, Side)

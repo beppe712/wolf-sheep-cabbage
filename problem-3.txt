@@ -1,0 +1,15 @@
+start(
+	wolf(wolf),
+	sheep(sheep),
+	cabbage(cabbage),
+	wolfAt(west),
+	sheepAt(west),
+	cabbageAt(west),
+	free
+)
+
+goal(
+	wolfAt(east),
+	sheepAt(east),
+	cabbageAt(east)
+)
